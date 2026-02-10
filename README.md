@@ -2,11 +2,14 @@
 
 This project tracks pedestrians in video. It uses **YOLO** to detect people and a **particle filter on the GPU** to follow them over time. There is also a **custom kernel that uses Tensor Cores (WMMA)** for fast matrix math. It is written in **C/C++ and CUDA** and was made for the Coursera GPU Programming capstone. It runs on **NVIDIA RTX A2000 6GB** (or other GPUs with compute capability 8.6, Ampere).
 
+**Video:** You can find the video which I describe the project in this [link](https://drive.google.com/file/d/1oE2HXhQ4FREP1wmQYGJctOFs-BDReMJq/view?usp=sharing)
+
 ## Demo: how the tracking looks
 
 The GIF below shows the pipeline in action: YOLO detects people, the particle filter keeps stable IDs, and each person gets a colored box, trajectory trail, and label.
 
 ![Pedestrian tracking demo — YOLO + particle filter with stable IDs and trajectories](output_images/output_gif.gif)
+
 
 ## What the project does
 
